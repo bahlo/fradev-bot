@@ -1,5 +1,5 @@
 {
-  "name": "fdbot",
+  "name": "fradev-bot",
   "version": "1.0.0",
   "description": "The bot of the Frankfurt Developer slack",
   "main": "index.js",
