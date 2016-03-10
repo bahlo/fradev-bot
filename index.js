@@ -16,17 +16,17 @@ bot.startRTM(function(err, bot, payload) {
 });
 
 // Listen on new team members
-controller.hears('team_join', function(bot, message) {
+controller.on('team_join', function(bot, message) {
   var user = message.user;
   var message ='Hi @' + user.name + ' and welcome to Frankfurt Developers!';
 
   // Add question to complete profile
-  if (user.profile.first_name == '' || user.profile.last_name == '') {
+  if (user.real_name == '') {
     message += '\nCan you please add the real name to your profile?';
   }
 
-  body.say({
+  bot.say({
     text:    message,
-    channel: 'general'
+    channel: '#general'
   })
 });
