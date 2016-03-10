@@ -1,0 +1,21 @@
+{
+  "name": "fdbot",
+  "version": "1.0.0",
+  "description": "The bot of the Frankfurt Developer slack",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:bahlo/fdbot.git"
+  },
+  "keywords": [
+    "bot",
+    "botkit",
+    "slack",
+    "fradev"
+  ],
+  "author": "Arne Bahlo <hallo@arne.me>",
+  "license": "MIT"
+}
