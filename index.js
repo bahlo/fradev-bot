@@ -2,7 +2,7 @@ var Botkit = require('botkit');
 
 // Create controller
 var controller = Botkit.slackbot({
-  debug: true
+  debug: process.env.DEBUG == '1'
 });
 
 // Create bot
@@ -45,5 +45,13 @@ controller.on('team_join', function(bot, message) {
     text:       message,
     channel:    generalID,
     link_names: 1
+  });
+});
+
+// Answer to hello/hi/hey
+controller.hears('(.*)', ['direct_message','direct_mention','mention'],
+  function(bot, message) {
+  bot.reply(message, {
+    text: 'Beep bop.'
   });
 });
