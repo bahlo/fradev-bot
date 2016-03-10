@@ -17,5 +17,8 @@
     "fradev"
   ],
   "author": "Arne Bahlo <hallo@arne.me>",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "botkit": "0.0.8"
+  }
 }
