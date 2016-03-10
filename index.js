@@ -42,7 +42,8 @@ controller.on('team_join', function(bot, message) {
   }
 
   bot.say({
-    text:    message,
-    channel: generalID
+    text:       message,
+    channel:    generalID,
+    link_names: 1
   });
 });
