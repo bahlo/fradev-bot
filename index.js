@@ -1,4 +1,5 @@
-var Botkit = require('botkit');
+var Botkit = require('botkit'),
+    helper = require('./helper.js');
 
 // Create controller
 var controller = Botkit.slackbot({
@@ -52,7 +53,15 @@ controller.on('team_join', function(bot, message) {
 // Answer to hello/hi/hey
 controller.hears('(.*)', ['direct_message','direct_mention','mention'],
   function(bot, message) {
+  var replies = [
+    'Beep bop.',
+    'Beedeleedop meep!',
+    'I\'m not the droid, you\'re looking for – wait, I don\'t have the force.',
+    'Bip beedep?',
+    'Beep beedeleedop.'
+  ];
+
   bot.reply(message, {
-    text: 'Beep bop.'
+    text: helper.randomElement(replies)
   });
 });
