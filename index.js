@@ -31,14 +31,15 @@ bot.startRTM(function(err, bot, payload) {
 controller.on('team_join', function(bot, message) {
   if (!generalID) {
     console.error("No ID for #general known");
+    return;
   }
 
-  var user = message.user;
-  var message ='Hi @' + user.name + ' and welcome to Frankfurt Developers!';
+  var user     = message.user,
+      message  = 'Hi <@' + user.id + '> and welcome to Frankfurt Developers!';
 
   // Add question to complete profile
   if (user.real_name == '') {
-    message += '\nCan you please add the real name to your profile?';
+    message += '\nCan you please add your real name to your profile?';
   }
 
   bot.say({
